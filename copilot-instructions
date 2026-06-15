@@ -1,0 +1,41 @@
+# SYSTEM PROMPT: Influencer Analytics Dashboard
+Usa este contexto como instrucción de sistema obligatoria para cualquier tarea de desarrollo en este repositorio. No se permite el uso de tecnologías ajenas a las especificadas.
+
+## 1. Stack Tecnológico y Restricciones Críticas
+- **Core:** Estricto HTML5 Semántico y **Tailwind CSS v4**.
+- **PROHIBIDO:** Uso de React, Vue, Angular, Astro o cualquier framework de JavaScript.
+- **PROHIBIDO:** Cargar Tailwind mediante `cdn.tailwindcss.com` o usar directrices/configuraciones de la v3. Asume un entorno de compilación nativo de Tailwind v4.
+- **Estilos:** Usa exclusivamente clases utilitarias de Tailwind. No se permite CSS personalizado ni modificado, con la única excepción de `Chart CSS` si se implementan gráficos.
+
+## 2. Contexto de Negocio y Datos
+El objetivo es un dashboard de reporte y consolidación de métricas para una influencer multi-plataforma (Instagram, TikTok, YouTube) orientado a la conversión y monetización.
+- **Productos a trackear:** - Producto A: 50€ (Comisión 15% = 7.50€)
+  - Producto B: 120€ (Comisión 15% = 18.00€)
+  - Producto C: 80€ (Comisión 15% = 12.00€)
+- **Preguntas clave a responder:** ¿Ingresos por comisiones?, ¿Productos más vendidos?, ¿Conversión vs Alcance?, ¿ROI por plataforma?, ¿Engagement Rate por canal/producto?.
+
+## 3. Arquitectura del Layout (Estructura en 3 Bloques)
+El diseño debe seguir una jerarquía visual clara estructurada en secciones independientes mediante un layout global (Navbar superior/Sidebar + Contenedor principal):
+
+### 1️⃣ Bloque Superior: KPIs Principales (Mínimo 3 Cards)
+- Indicadores de alto nivel orientados a resultados: Volumen (ventas/alcance), Ingresos (comisiones totales acumuladas), Engagement (tasa de conversión global o clics).
+
+### 2️⃣ Bloque Intermedio: Drivers de Rendimiento (Mínimo 3 Elementos/Widgets)
+- Factores que explican los KPIs: Rendimiento por plataforma (Instagram vs TikTok vs YouTube), Rendimiento por producto (ventas de A, B y C), conversión del funnel o actividad de publicaciones.
+
+### 3️⃣ Bloque Inferior: Detalles Operacionales y Listados
+- Datos tabulares detallados usando componentes reutilizables:
+  - `<table>` de Productos (Precio, comisiones, conversiones, ROI).
+  - `<table>` o listados de Plataformas y Campañas activos.
+  - Sección de Alertas visuales (Anomalías de rendimiento, picos de conversión).
+
+## 4. Criterios de Calidad y Evaluación (Infranqueables)
+- **Diseño Mobile-First Estricto:** Diseña pensando primero en pantallas móviles. Adapta progresivamente a pantallas mayores usando únicamente los breakpoints nativos de Tailwind (`sm:`, `md:`, `lg:`).
+- **Cero Scroll Horizontal:** El layout debe ser completamente fluido. Usa Flexbox y CSS Grid utilitarios de Tailwind para la distribución de layouts y grids de cards. No uses tamaños fijos en píxeles (`px`), prioriza unidades relativas y utilidades de espaciado de Tailwind.
+- **HTML Semántico Nativo:** Uso obligatorio de landmarks estructurados: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, y estructuración correcta de tablas (`<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`).
+- **Accesibilidad Operable:** Garantiza estados de foco visibles y legibilidad nativa antes de implementar atributos ARIA complejos.
+
+## 5. Formato de Respuesta de la IA
+- Entrega soluciones funcionales basadas exclusivamente en clases utilitarias de Tailwind v4.
+- Prioriza componentes limpios, modulares y reutilizables.
+- Ve directo al grano: muestra el código HTML/Tailwind estructurado sin introducciones teóricas ni saludos.
