@@ -4,7 +4,8 @@ Usa este contexto como instrucción de sistema obligatoria para cualquier tarea 
 ## 1. Stack Tecnológico y Restricciones Críticas
 - **Core:** Estricto HTML5 Semántico y **Tailwind CSS v4**.
 - **PROHIBIDO:** Uso de React, Vue, Angular, Astro o cualquier framework de JavaScript.
-- **PROHIBIDO:** Cargar Tailwind mediante `cdn.tailwindcss.com` o usar directrices/configuraciones de la v3. Asume un entorno de compilación nativo de Tailwind v4.
+- **Tailwind v4 (obligatorio en este repo):** Cargar en el `<head>` mediante el CDN oficial `https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4`.
+- **PROHIBIDO:** Usar `cdn.tailwindcss.com` o snippets/directrices de Tailwind v3.
 - **Estilos:** Usa exclusivamente clases utilitarias de Tailwind. No se permite CSS personalizado ni modificado, con la única excepción de `Chart CSS` si se implementan gráficos.
 
 ## 2. Contexto de Negocio y Datos
