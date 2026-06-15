@@ -10,7 +10,29 @@ import os, subprocess
 
 static_file_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), './')
 app = Flask(__name__)
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0 #disable cache
+
+
+@app.after_request
+def apply_cache_policy(response):
+    """Apply cache headers that are bfcache-friendly."""
+    content_type = response.headers.get("Content-Type", "")
+
+    if content_type.startswith("text/html"):
+        # Keep HTML short-lived but cacheable; avoid no-store/no-cache.
+        response.cache_control.public = True
+        response.cache_control.max_age = 60
+        response.cache_control.no_cache = False
+        response.cache_control.no_store = False
+        response.headers["X-Robots-Tag"] = "index, follow"
+        response.headers.pop("Pragma", None)
+    else:
+        # Static assets can be cached longer.
+        response.cache_control.public = True
+        response.cache_control.max_age = 3600
+        response.cache_control.no_cache = False
+        response.cache_control.no_store = False
+
+    return response
 
 # Serving the index file
 @app.route('/', methods=['GET'])
@@ -30,8 +52,6 @@ def serve_dir_directory_index():
 def serve_any_other_file(path):
     if not os.path.isfile(os.path.join(static_file_dir, path)):
         path = os.path.join(path, 'index.html')
-    response = send_from_directory(static_file_dir, path)
-    response.cache_control.max_age = 0 # avoid cache memory
-    return response
+    return send_from_directory(static_file_dir, path)
 
 app.run(host='0.0.0.0',port=3000, debug=True, extra_files=['./',])

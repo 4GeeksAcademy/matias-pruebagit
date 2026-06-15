@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard de analitica para influencer multi-plataforma con KPIs de conversion, ROI por canal y rendimiento por producto.">
+    <meta name="robots" content="index, follow">
     <title>Influencer Analytics Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
 </head>
 <body class="min-h-screen bg-slate-100 text-slate-900 antialiased">
     <header class="border-b border-slate-200 bg-white">
@@ -33,21 +37,21 @@
 
                 <article class="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
                     <p class="text-sm font-medium text-slate-500">Volumen total</p>
-                    <p class="mt-2 text-3xl font-bold">1,824</p>
+                    <h3 class="mt-2 text-3xl font-bold">1,824</h3>
                     <p class="mt-2 text-sm text-emerald-600">+14.6% vs mes anterior</p>
                     <p class="mt-1 text-xs text-slate-500">Ventas + alcance consolidado</p>
                 </article>
 
                 <article class="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
                     <p class="text-sm font-medium text-slate-500">Comisiones acumuladas</p>
-                    <p class="mt-2 text-3xl font-bold">8,946 EUR</p>
+                    <h3 class="mt-2 text-3xl font-bold">8,946 EUR</h3>
                     <p class="mt-2 text-sm text-emerald-600">+11.2% de ingresos</p>
                     <p class="mt-1 text-xs text-slate-500">Productos A, B y C</p>
                 </article>
 
                 <article class="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 sm:col-span-2 lg:col-span-1">
                     <p class="text-sm font-medium text-slate-500">Engagement de conversion</p>
-                    <p class="mt-2 text-3xl font-bold">4.8%</p>
+                    <h3 class="mt-2 text-3xl font-bold">4.8%</h3>
                     <p class="mt-2 text-sm text-emerald-600">+0.9pp en clics calificados</p>
                     <p class="mt-1 text-xs text-slate-500">Clicks con intencion de compra</p>
                 </article>
@@ -92,7 +96,7 @@
                 <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white">
                     <h3 class="border-b border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 sm:px-5">Rendimiento por producto</h3>
                     <div class="w-full">
-                        <table class="w-full table-fixed divide-y divide-slate-200 text-left text-xs sm:text-sm">
+                        <table class="w-full table-auto sm:table-fixed divide-y divide-slate-200 text-left text-xs sm:text-sm">
                             <thead class="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
                                 <tr>
                                     <th scope="col" class="px-3 py-3 break-words sm:px-5">Producto</th>
@@ -132,37 +136,37 @@
                 <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white">
                     <h3 class="border-b border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 sm:px-5">Plataformas y campanas activas</h3>
                     <div class="w-full">
-                        <table class="w-full table-fixed divide-y divide-slate-200 text-left text-xs sm:text-sm">
+                        <table class="w-full table-auto sm:table-fixed divide-y divide-slate-200 text-left text-xs sm:text-sm">
                             <thead class="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
                                 <tr>
-                                    <th scope="col" class="px-3 py-3 break-words sm:px-5">Plataforma</th>
-                                    <th scope="col" class="px-3 py-3 break-words sm:px-5">Campana</th>
-                                    <th scope="col" class="px-3 py-3 break-words sm:px-5">Estado</th>
-                                    <th scope="col" class="px-3 py-3 break-words sm:px-5">Engagement</th>
-                                    <th scope="col" class="px-3 py-3 break-words sm:px-5">ROI</th>
+                                    <th scope="col" class="w-1/5 px-2 py-2.5 sm:px-5 sm:py-3">Plataforma</th>
+                                    <th scope="col" class="w-2/5 px-2 py-2.5 sm:px-5 sm:py-3">Campana</th>
+                                    <th scope="col" class="w-1/5 px-2 py-2.5 sm:px-5 sm:py-3">Estado</th>
+                                    <th scope="col" class="px-2 py-2.5 whitespace-nowrap sm:px-5 sm:py-3">Engagement</th>
+                                    <th scope="col" class="px-2 py-2.5 whitespace-nowrap sm:px-5 sm:py-3">ROI</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-slate-100">
                                 <tr>
-                                    <th scope="row" class="px-3 py-3 font-medium break-words sm:px-5">Instagram</th>
-                                    <td class="px-3 py-3 break-words sm:px-5">Stories Flash Sale</td>
-                                    <td class="px-3 py-3 break-words sm:px-5"><span class="rounded-full bg-emerald-100 px-2 py-1 text-xs font-semibold text-emerald-700">Activa</span></td>
-                                    <td class="px-3 py-3 break-words sm:px-5">5.3%</td>
-                                    <td class="px-3 py-3 break-words sm:px-5">3.7x</td>
+                                    <th scope="row" class="px-2 py-2.5 font-medium sm:px-5 sm:py-3">Instagram</th>
+                                    <td class="px-2 py-2.5 leading-tight sm:px-5 sm:py-3">Stories Flash Sale</td>
+                                    <td class="px-2 py-2.5 sm:px-5 sm:py-3"><span class="inline-flex whitespace-nowrap rounded-full bg-emerald-100 px-2 py-1 text-xs font-semibold text-emerald-700 sm:text-sm">Activa</span></td>
+                                    <td class="px-2 py-2.5 whitespace-nowrap sm:px-5 sm:py-3">5.3%</td>
+                                    <td class="px-2 py-2.5 whitespace-nowrap sm:px-5 sm:py-3">3.7x</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row" class="px-3 py-3 font-medium break-words sm:px-5">TikTok</th>
-                                    <td class="px-3 py-3 break-words sm:px-5">Review Semanal B</td>
-                                    <td class="px-3 py-3 break-words sm:px-5"><span class="rounded-full bg-emerald-100 px-2 py-1 text-xs font-semibold text-emerald-700">Activa</span></td>
-                                    <td class="px-3 py-3 break-words sm:px-5">6.1%</td>
-                                    <td class="px-3 py-3 break-words sm:px-5">4.2x</td>
+                                    <th scope="row" class="px-2 py-2.5 font-medium sm:px-5 sm:py-3">TikTok</th>
+                                    <td class="px-2 py-2.5 leading-tight sm:px-5 sm:py-3">Review Semanal B</td>
+                                    <td class="px-2 py-2.5 sm:px-5 sm:py-3"><span class="inline-flex whitespace-nowrap rounded-full bg-emerald-100 px-2 py-1 text-xs font-semibold text-emerald-700 sm:text-sm">Activa</span></td>
+                                    <td class="px-2 py-2.5 whitespace-nowrap sm:px-5 sm:py-3">6.1%</td>
+                                    <td class="px-2 py-2.5 whitespace-nowrap sm:px-5 sm:py-3">4.2x</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row" class="px-3 py-3 font-medium break-words sm:px-5">YouTube</th>
-                                    <td class="px-3 py-3 break-words sm:px-5">Comparativa de Productos</td>
-                                    <td class="px-3 py-3 break-words sm:px-5"><span class="rounded-full bg-amber-100 px-2 py-1 text-xs font-semibold text-amber-700">Optimizar</span></td>
-                                    <td class="px-3 py-3 break-words sm:px-5">3.8%</td>
-                                    <td class="px-3 py-3 break-words sm:px-5">2.9x</td>
+                                    <th scope="row" class="px-2 py-2.5 font-medium sm:px-5 sm:py-3">YouTube</th>
+                                    <td class="px-2 py-2.5 leading-tight sm:px-5 sm:py-3">Comparativa de Productos</td>
+                                    <td class="px-2 py-2.5 sm:px-5 sm:py-3"><span class="inline-flex whitespace-nowrap rounded-full bg-amber-100 px-2 py-1 text-xs font-semibold text-amber-700 sm:text-sm">Optimizar</span></td>
+                                    <td class="px-2 py-2.5 whitespace-nowrap sm:px-5 sm:py-3">3.8%</td>
+                                    <td class="px-2 py-2.5 whitespace-nowrap sm:px-5 sm:py-3">2.9x</td>
                                 </tr>
                             </tbody>
                         </table>
